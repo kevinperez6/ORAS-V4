@@ -18,7 +18,7 @@ nav.navbar.navbar-expand-lg.navbar-light
         li.nav-item
           a#home.nav-link(href='http://127.0.0.1:8000/Aprendiz_Vista') Inicio
         li.nav-item
-          a#usar.nav-link(href='/') Cerrar Sesion
+          a#usar.nav-link(href='/') Cerrar sesión
 main
   .container
     br
@@ -29,7 +29,7 @@ main
       h3.ml-2 Registro y asistencia
     p.text-muted Permite registrar tu asistencia de la clase
     .row
-      .col-10
+      .col-sm-10
         section.table-section
           table.table
             thead
@@ -47,5 +47,16 @@ main
                     option 2025981
         br
         section.section-buttons
-          a(href='/homePageAprendiz') Aceptar
-          a(href='/homePageAprendiz') Cancelar
+          a.btn.bg-primary.text-white(href='/homePageAprendiz') Aceptar
+          a.btn.text-danger(href='/homePageAprendiz') Cancelar
+br
+br  
+br
+br
+br
+br
+br
+br
+br
+br
+include ../layout/footer

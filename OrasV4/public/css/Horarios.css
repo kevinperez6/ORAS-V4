@@ -83,17 +83,7 @@ background-color:var(--coll) ;
   width: 70%;
 }
 .section-horario{
+  overflow: auto;
   box-shadow: 0px 0px 8px -1px #00000052;
   border-radius: 0.6rem;
-<<<<<<< HEAD
-=======
-}
-@media(max-width: 675px){
-  .text-semana{
-    font-size: 15px;
-  }
-  .text-horario{
-    width: 100% !important;
-  }
->>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
 }

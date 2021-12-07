@@ -22,20 +22,22 @@ nav.navbar.navbar-expand-lg.navbar-light
 main
   .container
     .row
-      .col-9.mt-5
+      .col-sm-9.mt-5.section-container
         section.section-inform
-          img.imag-brand(src='img/profile.png')
           br
-          h3.w-75
+          h4
             | Permite consultar registros individuales y generales del
             | sistema.
           br
           a.btn.bg-primary.text-white(type='submit' href='consultaIndividual')
             | Consulta
-            | Individual
+            | individual
           br
           br
-          a.btn.bg-primary.text-white(type='submit' href='consultaGeneral') Consulta General
+          a.btn.bg-primary.text-white(type='submit' href='consultaGeneral') Consulta general
           br
           br
-          a.btn-outline-danger(href='homePageInstructor') Cancelar
+          a.btn-outline-danger(href='homePageInstructor') Cancelar y volver
+br
+br
+include ../layout/footer

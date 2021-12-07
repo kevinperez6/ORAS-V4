@@ -8,7 +8,7 @@ head
   link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
   link(rel='stylesheet' href='css/Cambiar_Definir_Olvido.css')
-  title Cambiar Definir
+  title Ayuda olvido contraseña Aprendiz
 nav.navbar.navbar-expand-lg.navbar-light
   .container
     a.navbar-brand
@@ -19,15 +19,14 @@ nav.navbar.navbar-expand-lg.navbar-light
         li.nav-item
           a#home.nav-link(href='homepageAprendiz') Inicio
         li.nav-item
-          a#usar.nav-link(href='/') Cerrar Sesion
+          a#usar.nav-link(href='/') Cerrar sesión
 .container
   br
   .row
     span
       img(src="static 'img/Inters.png" width='35' alt='')
       span
-        h5.text-center Ayuda sobre el olvido de contrase&ntilde;a
-        br
+        h4.text-center Ayuda sobre el olvido de contrase&ntilde;a
         br
         .col-12.justify-content-center
           section.form-answer
@@ -35,7 +34,7 @@ nav.navbar.navbar-expand-lg.navbar-light
               | Por favor, selecciona una pregunta y a continuaci&oacute;n su respuesta correspondiente. Esto se utilizar&aacute; para su verificaci&oacute;n:
             hr
             .form-group
-              h4 Pregunta
+              h5 Pregunta
               p.text-muted Seleccione una opci&oacute;n
               select#sel1.form-control.formul(name='sellist1')
                 option Ingrese los &uacute;ltimos cinco (5) digitos de su documento
@@ -45,8 +44,10 @@ nav.navbar.navbar-expand-lg.navbar-light
             br
             .form-group
               label(for='pwd')
-                h4 Respuesta
+                h5 Respuesta
               input#rt.form-control.formul(type='number' placeholder='Selecciona una opción de la lista y respóndela' name='rt')
             a.boton-form(href='systemProfileApre') Enviar
-            a.btn.text-muted(href='http://127.0.0.1:8000/Perfil_Sistema_Aprendiz') Cancelar
+            a.btn.text-muted(href='http://127.0.0.1:8000/Perfil_Sistema_Aprendiz') Cancelar y volver
 br
+br
+include ../layout/footer

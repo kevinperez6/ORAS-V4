@@ -26,7 +26,7 @@ main
     p.text-center Ingresa seg&uacute;n tu rol en el SENA
     br
     .row
-      .col-4
+      .col-sm-4
         .card(style='width: 100%')
           img.card-img-top.image-overlay(src='img/instructor.jpg' alt='Card image' style='width: 100%')
           .card-body.overlay
@@ -35,7 +35,7 @@ main
               | Puedes recibir consultas respecto a tu proceso en la ficha.
               | Asistencia, inasistencia o inasistencias justificadas
             a.boton-overlay(href='/ingresoInstructor') Ingresar
-      .col-4
+      .col-sm-4.mt-3
         .card(style='width: 100%')
           img.card-img-top.image-overlay(src='img/aprendiz.jpg' alt='Card image' style='width: 100%')
           .card-body.overlay
@@ -44,13 +44,15 @@ main
               | Realiza consultas respecto a la asistencia de cada uno de los
               | aprendices de tu ficha correspondiente
             a.boton-overlay(href='/ingresoAprendiz') Ingresar
-      .col-4
+      .col-sm-4.mt-3
         .card(style='width: 100%')
           img.card-img-top.image-overlay(src='img/adminLogin.jpg' alt='Card image' style='width: 100%')
           .card-body.overlay
             h3.card-title Administrador
             p.card-text.text-muted
               | Puedes editar, eliminar, actualizar o a&ntilde;adir a cualquier
-              | aprendiz dentro de tu ficha de formaci&oacute;n
+              | aprendiz dentro de tu ficha de formaci&oacute;n              
             a.boton-overlay(href='/ingresoAdmin') Ingresar
-  br
+br
+include ./layout/footer
+

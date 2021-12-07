@@ -25,7 +25,7 @@ const {inicio,
   definirAyudaAprendiz,
   gestionDeConsultas,
   consultaGeneral,
-  consultaIndividual
+  consultaIndividual,
 } = require('../controllers/paginaController.js'); 
 
 const { authenticationInstructor,authenticationAprendiz,authenticationAdmin} = require('../controllers/authentication.js')
@@ -86,6 +86,7 @@ router.get('/gestionDeConsultas', gestionDeConsultas);
 router.get('/consultaGeneral', consultaGeneral);
 
 router.get('/consultaIndividual', consultaIndividual);
+
 
 
 

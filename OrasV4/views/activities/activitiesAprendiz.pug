@@ -17,7 +17,7 @@ nav.navbar.navbar-expand-lg.navbar-light
         li.nav-item
           a#home.nav-link(href='/homePageAprendiz') Inicio
         li.nav-item
-          a#usar.nav-link(href='/') Cerrar Sesion
+          a#usar.nav-link(href='/') Cerrar sesión
 .container
   br
   br
@@ -31,19 +31,16 @@ nav.navbar.navbar-expand-lg.navbar-light
   .row
     .col-12.section-form-group
       section.d-flex
-        .col-4
-          h5
-            strong Mostrar semana
+        .col-sm-4
+          p Mostrar semana
           select#selectSemana.form-control.form-inputs(name='selectSemana')
             option Seleccione
-        .col-4
-          h5
-            strong Hora de inicio
+        .col-sm-4
+          p Hora de inicio
           select#inicio.form-control.form-inputs(name='inicio')
             option Seleccione
-        .col-4
-          h5
-            strong Hora de fin
+        .col-sm-4
+          p Hora de fin
           select#fin.form-control.form-inputs(name='fin')
             option Seleccione
       br
@@ -53,12 +50,12 @@ nav.navbar.navbar-expand-lg.navbar-light
   br
   br
   .row
-    .col-12
+    .col-sm-12
       .d-flex
         span
           img(src='img/check.png' alt='Logo Formulario')
-        h3.ml-2 Calendario
-      p.text-muted.w-75
+        h3 Calendario
+      p.text-muted
         | Aqu&iacute; puedes visualizar el horario seg&uacute;n tus asignaturas, cursos
         | complementarios u otros programas registrados en tu ficha. Ingl&eacute;s,
         | Promover, Cultura F&iacute;sica, etc.
@@ -194,9 +191,11 @@ nav.navbar.navbar-expand-lg.navbar-light
               td
   br
   a(href='#')
-    button.btn.btn-outline-success.w-25 A&ntilde;adir Actividad
+    button.btn.btn-outline-primary A&ntilde;adir Actividad
   a(href='/homePageAprendiz')
-    button.btn.btn-outline-danger Cancelar y volver
+    button.btn.text-danger Cancelar y volver
 br
 script(src='/templates/Actividades/js/01-app.js')
 script(src='/templates/Actividades/js/datosDePrueba.js')
+
+include ../layout/footer

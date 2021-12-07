@@ -18,38 +18,37 @@ nav.navbar.navbar-expand-lg.navbar-light
         li.nav-item
           a#home.nav-link(href='homePageInstructor') Inicio
         li.nav-item
-          a#usar.nav-link(href='/') Cerrar Sesion
+          a#usar.nav-link(href='/') Cerrar sesión
 .container
   .row
-    .col-12
+    .col-sm-12
       section
         .row
           .col-12.mt-5
-            h2
+            h3
               img.iimg(src='img/consult.png' alt='')
               | GESTION DE CONSULTAS DE INFORMES GENERALES
             hr
             div
-              h5  Visor Informes y Consultas
+              h5 Visión de informes y consultas
               p.text-muted
                 | Introduzca los datos que tenga y pulse en &quot;Buscar&quot;. Deje los campos en blanco para obtener todos los valores
-              .col-12
-                section.d-flex
-                  .col-4
+                section.d-flex.align-items-center
+                  .col-sm-4
                     label(for='sel1')
-                      h5 Buscar por:
+                      p Buscar por:
                     select#sel1.form-control(name='sellist1')
                       option Nombre de informe
                       option 2
                       option 3
                       option 4
-                  .col-4
+                  .col-sm-4
                     label(for='sel1')
-                      h5 Empieza por:
+                      p Empieza por:
                     input#sel1.form-control(name='sellist1' placeholder='')
-                  .col-4
+                  .col-sm-4
                     label(for='')
-                      h5 Seleccionar ficha
+                      p Seleccionar ficha
                     select#sel1.form-control(name='sellist1')
                       option 2024373
                       option 2
@@ -62,20 +61,20 @@ nav.navbar.navbar-expand-lg.navbar-light
                       tr
                         th Sede
                         th Trimestre
-                        th Descripcion
+                        th Descripción
                         th Formato
                         th Fecha
-                        th Ver Informe
+                        th Informe
                     tbody
                       tr
-                        td Centro de electricidad CEET
+                        td CEET
                         td
                           div(classs='input-container')
                             select.select
                               option(values='PDF') 1
                               option(values='XLS') 2
                               option(values='XLS') 3
-                        td CLASE ADSI
+                        td ADSI
                         td
                           div(classs='input-container')
                             select.select
@@ -90,14 +89,14 @@ nav.navbar.navbar-expand-lg.navbar-light
                             td
                               a(href='#') Ver Informe
                       tr
-                        td Centro de Electricidad CEET
+                        td CEET
                         td
                           div(classs='input-container')
                             select.select
                               option(values='PDF') 1
                               option(values='XLS') 2
                               option(values='XLS') 3
-                            td CLASE ADSI
+                            td ADSI
                             td
                               div(classs='input-container')
                                 select.select
@@ -113,9 +112,11 @@ nav.navbar.navbar-expand-lg.navbar-light
                                   a(href='#') Ver Informe
               br
               br
-              a.btn.btn-success(href='#') Iniciar b&uacute;squeda
+              a.btn.btn-primary(href='#') Buscar
               a.btn.btn-outline-danger(href='GestionDeConsultas') Cancelar
               br
               br
           br
           br
+
+include ../layout/footer

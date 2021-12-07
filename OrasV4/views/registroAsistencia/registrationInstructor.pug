@@ -30,7 +30,7 @@ main
     p.text-muted
       | Permite registrar tu asistencia en cada una de las clases
     .row
-      .col-10
+      .col-sm-10
         section.table-section
           table.table
             thead
@@ -48,7 +48,16 @@ main
                     option 2025981
         br
         section.section-buttons
-          a(href='#') Generar c&oacute;digo QR
-          a.btn.bg-warning(href='http://127.0.0.1:8000/Registro_Manual') Registro manual
-          a.btn.bg-success.text-white(href='homePageInstructor') Aceptar
-          a.btn.bg-danger.text-white(href='homePageInstructor') Cancelar
+          a.btn.bg-primary.text-white(href='homePageInstructor') Aceptar 
+          br
+          br
+          a.btn.bg-success.text-white(href='#') Generar c&oacute;digo QR
+          br
+          br
+          a.btn.bg-warning.text-white(href='http://127.0.0.1:8000/Registro_Manual') Registro manual
+          br          
+          br
+          a.btn.text-danger(href='homePageInstructor') Cancelar y volver
+br
+br
+include ../layout/footer

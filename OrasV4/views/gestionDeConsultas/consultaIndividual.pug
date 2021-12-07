@@ -21,32 +21,30 @@ nav.navbar.navbar-expand-lg.navbar-light
           a#usar.nav-link(href='/') Cerrar sesi&oacute;n
 .container
   .row
-    .col-12
+    .col-sm-12
       span
-        img(src='img/profile.png' width='35' alt='')
-      h2 Consultas individuales
+      br
+      h4 Consultas individuales
       form.formulario
         h5.text-muted Ingrese el ID del aprendiz
-        br
         div(classs='input-container')
           ion-icon(name='search')
           input(type='number' placeholder='Documento del aprendiz')
         br
         h5 Modulo/ Trimestre 1
         select
-          option(values='1') I
-          option(values='2') II
-          option(values='3') III
-          option(values='4') IV
-      br
+          option(values='1') Trimestre I
+          option(values='2') TrimestreII
+          option(values='3') TrimestreIII
+          option(values='4') Trimestre IV
       section.section-formul
         table.table
           thead
             tr
               th(scope='col') Nombre
               th(scope='col') Apellido
-              th(scope='col') ficha
-              th(scope='col') Cod registro asistencia
+              th(scope='col') Ficha
+              th(scope='col') Registr. asistencia
               th(scope='col') Fecha
               th(scope='col') Estado
               th(scope='col') Novedad
@@ -57,7 +55,7 @@ nav.navbar.navbar-expand-lg.navbar-light
               td 2024373
               td 2564
               td 05/03/21
-              td NO asisti&oacute;
+              td No asisti&oacute;
               td(colspan='2') Excusa m&eacute;dica
             tr
               td Brandon
@@ -65,10 +63,12 @@ nav.navbar.navbar-expand-lg.navbar-light
               td 2024373
               td 3655
               td 06/03/21
-              td asistio
+              td Asistio
               td(colspan='2')
+              br  
       form.formulario
-        .container
-          a.btn.btn-success(type='submit' href='#') Iniciar busqueda
-          a.btn.btn-danger(type='submit' href='gestionDeConsultas') Cancelar
-      br
+          a.btn.btn-primary(type='submit' href='#') Buscar
+          a.btn.text-danger(type='submit' href='gestionDeConsultas') Cancelar
+br
+br
+include ../layout/footer

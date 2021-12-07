@@ -6,7 +6,7 @@ head
   link(rel='preconnect' href='https://fonts.gstatic.com')
   link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
   link(rel='stylesheet' href='css/stilos.css')
-  title Mi perfil del Sistema
+  title Mi perfil del sistema instructor
 nav.navbar.navbar-expand-lg.navbar-light
   .container
     a.navbar-brand
@@ -16,16 +16,16 @@ nav.navbar.navbar-expand-lg.navbar-light
       ul.navbar-nav.ml-auto
         li.nav-item
         li.nav-item
-          a#usar.nav-link(href='/') Cerrar Secion
+          a#usar.nav-link(href='/') Cerrar sesión
 //- Main
 .container
   .d-flex.mt-5.align-items-center
     span
       img(src='img/instructivo.png' width='40' alt='logo Formulario')
-    h2.ml-2 Mi perfil del sistema
-  p.text-muted Perfil del instructor
+    h3.ml-2 Mi perfil del sistema
+  p.text-muted.text-center Perfil instructor
   .row
-    .col-11
+    .col-sm-11
       section.section-form-profile
         .d-flex
           span
@@ -52,7 +52,7 @@ nav.navbar.navbar-expand-lg.navbar-light
           | Idioma actual para informes y correos electr&oacute;nicos:
           span
             strong
-              select#sel1.mt-3.form-control.form-inputs.w-25(name='sellist1')
+              select#sel1.mt-3.form-control.form-inputs(name='sellist1')
                 option Espa&ntilde;ol
                 option Ingl&eacute;s
         hr
@@ -65,9 +65,10 @@ nav.navbar.navbar-expand-lg.navbar-light
           | Si no estar&aacute;s tiempo disponible en la plataforma, puedes elegir un
           | usuario que reciba los correos e informes por ti
         h5.mt-4 Correo del usuario alternativo
-        input.mt-3.form-control.w-50(type='email' placeholder='Correo')
+        input.mt-3.form-control(type='email' placeholder='Correo de usuario alternativo')
         br
         a.btn.btn-outline-primary(href='systemProfileInst' type='submit') Aceptar
-        a.btn.btn-outline-danger(href='homePageInstructor') Cancelar y volver
+        a.btn.text-danger(href='homePageInstructor') Cancelar y volver
 br
 br
+include ../layout/footer

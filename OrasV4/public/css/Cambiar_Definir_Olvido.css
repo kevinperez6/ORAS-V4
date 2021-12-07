@@ -31,34 +31,22 @@ h1,h2, h4{
   background:var(--azul-turquesa);
   color:var(--negro);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
 .rt{
   font-family: sans-serif;
   line-height: 30px;
   font-size: 20px;
-<<<<<<< HEAD
   letter-spacing: 0px;
   color:#636363
-=======
-  color: #636363;
->>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
 }
 .form-answer{
-  padding: 30px;
+  padding: 20px;
   background-color: #fff;  
   box-shadow: 0px 0px 8px -1px #00000052;
   border-radius: 0.4rem;
 }
 .formul{
   border-radius: 0px;
-<<<<<<< HEAD
   width: 80%;
-=======
-  width: 100%;
->>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
 }
 .formul:hover{
   border-bottom: 2px solid #03989E;
@@ -85,13 +73,7 @@ height:10em ;
   border: 2px solid #03989E;
   padding: 8px;
   background: none;
-<<<<<<< HEAD
   width: 15%;
-=======
-  width: 25%;
-  color: #000;
-  font-weight: 400;
->>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
 }
 .boton-form:hover{
   background-color: #03989E;
@@ -99,14 +81,15 @@ height:10em ;
 }
 p{
   font-weight: 400;
-<<<<<<< HEAD
-=======
 }
 @media(max-width: 670px) {
   .rt{
     font-size: 15px;
     width: 95% !important;
     line-height: 20px;
+  }
+  .form-control{
+    width: 100%;
   }
   .text-help{
     font-size: 18px;
@@ -122,6 +105,6 @@ p{
   a.boton-form{
     color: #000;
     font-weight: 400;
+    width: auto;
   }
->>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
 }

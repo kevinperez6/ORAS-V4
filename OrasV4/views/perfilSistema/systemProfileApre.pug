@@ -22,10 +22,10 @@ nav.navbar.navbar-expand-lg.navbar-light
   .d-flex.mt-5.align-items-center
     span
       img(src='img/faceAprendiz.png' width='40' alt='auto')
-    h2.ml-2 Mi perfil del sistema
+    h3.ml-2 Mi perfil del sistema
   p.text-muted Perfil del aprendiz
   .row
-    .col-11
+    .col-sm-11
       section.section-form-profile
         .d-flex
           span
@@ -49,12 +49,12 @@ nav.navbar.navbar-expand-lg.navbar-light
         p.text-muted
           | Idioma actual del sitio web ORAS:
           span
-            strong Espa&ntilde;ol
+            strong  Espa&ntilde;ol
         p.text-muted
           | Idioma actual para informes y correos electr&oacute;nicos:
           span
             strong
-              select#sel1.mt-3.form-control.form-inputs.w-25(name='sellist1')
+              select#sel1.mt-3.form-control.form-inputs(name='sellist1')
                 option Espa&ntilde;ol
                 option Ingl&eacute;s
         hr
@@ -67,9 +67,10 @@ nav.navbar.navbar-expand-lg.navbar-light
           | Si no estar&aacute;s tiempo disponible en la plataforma, puedes elegir un
           | usuario que reciba los correos e informes por ti
         h5.mt-4 Correo del usuario alternativo
-        input.mt-3.form-control.w-50(type='email' placeholder='Correo')
+        input.mt-3.form-control(type='email' placeholder='Correo de usuario alternativo')
         br
         a.btn.btn-outline-primary(href='/homePageAprendiz') Guardar cambios
-        a.btn.btn-outline-danger(href='/homePageAprendiz') Cancelar y volver
+        a.btn.text-danger(href='/homePageAprendiz') Cancelar y volver
 br
 br
+include ../layout/footer

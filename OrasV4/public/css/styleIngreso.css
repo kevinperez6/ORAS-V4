@@ -14,10 +14,13 @@ h2 {
   font-weight: 600;
   color: #03989e;
 }
-.text-login {
+.text-login{
   font-size: 30px;
   letter-spacing: -0.5px;
-  text-align: center;
+  
+}
+.text-muted{
+  width: 100% !important;
 }
 .boton-one-form {
   color: rgb(0, 0, 0);

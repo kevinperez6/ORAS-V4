@@ -22,17 +22,17 @@ nav.navbar.navbar-expand-lg.navbar-light
   .d-flex.mt-5.align-items-center
     span
       img(src='img/check.png' width='40' alt='Logo Formulario')
-    h2.ml-2 Mi perfil del sistema
-  p.text-muted Perfil del super usuario
+    h3.ml-2 Mi perfil del sistema
+  p.text-muted Perfil del superusuario
   .row
-    .col-11
+    .col-sm-11
       section.section-form-profile
         .d-flex
           span
             img(src='img/territorium.png' alt='')
           h4.ml-2 Contrase&ntilde;a
         p.text-muted &iquest;Quieres cambiar tu contrase&ntilde;a?
-        a(href='recoverPasswordAdmin') Cambiar contrase&ntilde;a
+        a.btn.bg-primary.text-white(href='recoverPasswordAdmin') Cambiar contrase&ntilde;a
         a.btn.text-primary(href='#') Ayuda de olvido de contrase&ntilde;a
         hr
         br
@@ -50,7 +50,7 @@ nav.navbar.navbar-expand-lg.navbar-light
           | Idioma actual para informes y correos electr&oacute;nicos:
           span
             strong
-              select#sel1.mt-3.form-control.form-inputs.w-25(name='sellist1')
+              select#sel1.mt-3.form-control.form-inputs(name='sellist1')
                 option Espa&ntilde;ol
                 option Ingl&eacute;s
         hr
@@ -63,9 +63,10 @@ nav.navbar.navbar-expand-lg.navbar-light
           | Si no estar&aacute;s tiempo disponible en la plataforma, puedes elegir un
           | usuario que reciba los correos e informes por ti
         h5.mt-4 Correo del usuario alternativo
-        input.mt-3.form-control.w-50(type='email' placeholder='Correo')
+        input.mt-3.form-control(type='email' placeholder='Correo de usuario alternativo')
         br
         a.btn.btn-outline-primary(href='http://127.0.0.1:8000/Super_Usuario_Vista' type='submit') Aceptar
-        a.btn.btn-outline-danger(href='http://127.0.0.1:8000/Super_Usuario_Vista') Cancelar y volver
+        a.btn.text-danger(href='http://127.0.0.1:8000/Super_Usuario_Vista') Cancelar y volver
 br
 br
+include ../layout/footer
