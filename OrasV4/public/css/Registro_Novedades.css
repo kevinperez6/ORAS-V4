@@ -1,0 +1,97 @@
+:root {
+    --amarillo   : #ffc107;
+    --azulMar    : #0097A7;
+    --rojoPastel : #ad0c0c;
+    --blanco     : #ffffff;
+    --negro      : #212121;
+    --violeta    : #27085e;
+    --gris       : #bbb9b9;
+    --dark       : #16191c;
+    --coll       :#ececec;
+    --azul-turquesa :#03989E;
+    --sds:#826B86;
+  }
+  
+ 
+  
+  .inicio {
+   font-family: 'RocknRoll One', sans-serif;
+   font-weight: 700;
+   color:var(--negro) ;
+   background-color:var(--blanco);
+    
+  }
+ 
+ 
+  .pantallaUno{
+   font-family: 'RocknRoll One', sans-serif;
+   font-weight: 700;
+   color:var(--dark) ;
+   background-color:var(--coll) ;
+  
+  }
+ 
+  .logo-brand{
+     min-width: 150px;
+     max-width: 80px;
+    /*width: 25px;%;*/
+  }
+ .navbar {
+   background:var(--azul-turquesa);
+   color:var(--negro);
+ }
+ 
+ 
+ 
+ a:hover{
+   color:var(--sds);
+ }
+
+
+ .pie-pagina{
+   text-align: center;
+ }
+ 
+ button:hover{
+   color:var(--sds) ;
+ }
+ 
+ .btn{
+    margin: 0px 90px;
+    margin-bottom: 100px;
+
+ }
+ 
+ .celdas{
+    padding: 100px;
+     margin: 0px 10px ;
+     ;
+    
+ }
+
+
+ /*margen exterior , pading*/
+ img{
+        min-width: 150px;
+    max-width: 80px;
+  }
+ 
+ h2{
+     margin: 0px 30px;
+ }
+
+ footer{
+  background:var(--sds);
+  width: 100% ;
+  padding: 0.5px ;
+  min-height: calc(100vh - 400px);
+}
+
+.Codigo{
+  margin-left:20% ;
+  margin-top: 20%;
+}
+
+.Botones{
+  margin-left:2%;
+}

@@ -1,0 +1,98 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(href='{% static "css/style_lista_de_aprendices.css" %}' rel='stylesheet')
+  title Lista de aprendices
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='http://127.0.0.1:8000/instructor_vista_Uno') Inicio
+        li.nav-item
+          a#usar.nav-link(href='http://127.0.0.1:8000/') Cerrar Sesion
+main
+  .container
+    br
+    br
+    h3 Listado de aprendices
+    p.text-muted.text-parr
+      | Ac&aacute; puedes visualizar el listado completo, actualizado y ordenado de
+      | los aprendices pertenecientes a la ficha
+    br
+    .row
+      .col-12
+        section.section-table
+          table.table
+            thead
+              tr
+                th(scope='col') Tipo Documento
+                th(scope='col') Num Documento
+                th(scope='col') Primer Nombre
+                th(scope='col') Segundo Nombre
+                th(scope='col') Primer Apellido
+                th(scope='col') Segundo Apellido
+                th(scope='col') Email
+                th(scope='col') Jornada
+                th(scope='col') Trimestre
+            tbody
+              tr
+                td CC
+                td 1008646872
+                td Brandon
+                td -
+                td Pe&ntilde;a
+                td Contreras
+                td b@misena.edu.co
+                td Diurna
+                td 3
+              tr
+                td CC
+                td 1006541359
+                td Laura
+                td Mar&iacute;a
+                td Fernadez
+                td Sanchez
+                td flau@misena.edu.co
+                td Nocturna
+                td 1
+              tr
+                td CC
+                td 1008434649
+                td Kevin
+                td -
+                td Prez
+                td Castillos
+                td kperez@misena.edu.co
+                td Nocturna
+                td 4
+          br
+          a.btn.btn-outline-primary.w-25(href='http://127.0.0.1:8000/listado_novedades_superu') Cancelar
+          a(href='http://127.0.0.1:8000/instructor_vista_Uno') Volver
+    br
+    br
+    .row
+      .col-6
+        .card.img-fluid(style='width: 100%')
+          img.card-img-top(src='https://i2.wp.com/elpilon.com.co/wp-content/uploads/2020/09/sena.jpg?fit=800%2C533&ssl=1' alt='Card image' style='width: 100%')
+          .card-img-overlay.section-group
+            h3.card-title.text-white Aprendices
+            p.card-text.text-white
+              | Actualmente, la ficha cuenta con 21 aprendices en estado de
+              | formaci&oacute;n.
+      .col-6
+        .card.img-fluid(style='width: 100%')
+          img.card-img-top(src='https://www.sena.edu.co/es-co/Noticias/NoticiasImg/El-SENA-tiene-abiertas-inscripciones.jpg' alt='Card image' style='width: 100%')
+          .card-img-overlay.section-group
+            h3.card-title.text-white Proyectos formativos
+            p.card-text.text-white.w-75
+              | Actualmente, la ficha cuenta con cuatro proyectos formativos.
+    br
+br

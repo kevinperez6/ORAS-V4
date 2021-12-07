@@ -1,0 +1,75 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/stilos.css')
+  title Mi perfil del Sistema
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+        li.nav-item
+          a#usar.nav-link(href='/') Cerrar sesi&oacute;n
+// Main
+.container
+  .d-flex.mt-5.align-items-center
+    span
+      img(src='img/faceAprendiz.png' width='40' alt='auto')
+    h2.ml-2 Mi perfil del sistema
+  p.text-muted Perfil del aprendiz
+  .row
+    .col-11
+      section.section-form-profile
+        .d-flex
+          span
+            img(src='img/territorium.png' alt='auto')
+          h4.ml-2 Contrase&ntilde;a
+        p.text-muted &iquest;Quieres cambiar tu contrase&ntilde;a?
+        a(href='/changePasswordAprendiz')
+          button.btn.bg-primary.text-white
+            | Cambiar contrase&ntilde;a
+        a(href='definirAyudaAprendiz')
+          button.btn.text-primary
+            | Ayuda de olvido de contrase&ntilde;a
+        hr
+        br
+        .d-flex
+          span
+            img(src='img/info.png' alt='')
+          h4.ml-2 Personalizaciones
+          br
+          br
+        p.text-muted
+          | Idioma actual del sitio web ORAS:
+          span
+            strong Espa&ntilde;ol
+        p.text-muted
+          | Idioma actual para informes y correos electr&oacute;nicos:
+          span
+            strong
+              select#sel1.mt-3.form-control.form-inputs.w-25(name='sellist1')
+                option Espa&ntilde;ol
+                option Ingl&eacute;s
+        hr
+        br
+        .d-flex
+          span
+            img(src='img/profile.png' width='30' alt='auto')
+          h4.ml-2 Usuario alternativo
+        p.text-muted
+          | Si no estar&aacute;s tiempo disponible en la plataforma, puedes elegir un
+          | usuario que reciba los correos e informes por ti
+        h5.mt-4 Correo del usuario alternativo
+        input.mt-3.form-control.w-50(type='email' placeholder='Correo')
+        br
+        a.btn.btn-outline-primary(href='/homePageAprendiz') Guardar cambios
+        a.btn.btn-outline-danger(href='/homePageAprendiz') Cancelar y volver
+br
+br

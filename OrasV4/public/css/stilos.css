@@ -1,0 +1,97 @@
+  :root {
+  --azulMar    : #0097A7;
+  --blanco     : #ffffff;
+  --negro      : #212121;
+  --violeta    : #27085e;
+  --gris       : #bbb9b9;
+  --dark       : #16191c;
+  --coll       :#ececec;
+  --azul-turquesa :#03989E;
+  --sds:#826B86;
+}
+
+.inicio {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #000;
+  }
+  h1,h2,h3,h4{
+    font-family: 'Inter', sans-serif;
+  }
+  .form{
+    border-radius: 0;
+    width: 95%;
+  }
+  .form-section{
+    box-shadow: 0px 0px 8px -1px #00000052;
+    border-radius: 0.5rem;
+    padding: 40px;
+    background-color: #fff;
+  }
+ .pantallaUno{
+  color: #000;
+  background-color:var(--coll) ;
+  }
+.logo-brand{
+   min-width: 150px;
+   max-width: 80px;
+}
+.navbar {
+  background:var(--azul-turquesa);
+  color: #000;
+}
+.logo{
+  min-width: 80px;
+   max-width: 120px;
+}
+.section-form-profile{
+  background-color: #fff;
+  padding: 35px;
+  box-shadow: 0px 0px 8px -1px #00000052;
+  border-radius: 0.5rem;
+}
+.table-section{
+  box-shadow: 0px 0px 8px -1px #00000052;
+  border-radius: 0.5rem;
+  padding: 40px;
+  background-color: #fff;
+}
+.boton-form{
+  border: 2px solid #0097A7;
+  color: #000;
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+}
+.boton-form:hover{
+  background-color: #0097A7;
+  color: #fff;
+  text-decoration: none;
+<<<<<<< HEAD
+=======
+}
+@media(max-width:670px){
+  .text-register{
+    font-size: 28px;
+  }
+  .form-section{
+    padding: 22px;
+  }
+  .boton-form{
+    width: 45%;
+  }
+  .text-sistem{
+    font-size: 28px;
+    margin-left: 0 !important;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .form-email{
+    width: 100% !important;
+    border-radius: 0;
+  }
+  .boton-help{
+    margin-top: 1rem;
+  }
+>>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
+}

@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(href='/css/styleIngreso.css' rel='stylesheet')
+  script(src='js/app.js')
+  title Ingreso de los aprendices
+nav.navbar.navbar-expand-lg
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+br
+.container
+  br
+  br
+  section.section-father-login
+    .row
+      section.section-login
+        br
+        div
+          span.text-center.material-icons-outlined
+            img.mx-auto.d-block(width='30' src='img/profile.png' alt='auto')
+            p.text-muted Aprendiz
+        .col-sm-12.p-5
+          p.welcome-text &iexcl;Hola, aprendiz!
+          h2.text-login
+            strong Iniciar sesi&oacute;n
+          p.text-muted.w-70
+            | Aqu&iacute; puedes revisar las diferentes consultas que hizo tu
+            | instructor respecto a las asistencias a clase
+          hr
+          br
+          form#enviar-email(action='/ingresoAprendiz' method="POST")
+            .form-group
+              label(for='email')
+                h5 Correo electr&oacute;nico
+              input#email.form-control.form-one(type='email' placeholder='Correo misena' name='email')
+            br
+            .form-group
+              label(for='pwd')
+                h5 Contrase&ntilde;a
+              input#pwd.form-control.form-one(type='password' placeholder='Contraseña' name='password')
+            br
+            .form-group
+              label(for='sel1')
+                h5 Idioma
+              select#sel1.form-control.form(name='sellist1')
+                option Espa&ntilde;ol
+                option Ingl&eacute;s
+            div
+              button#enviar.boton-one-form(type='submit' role='button') Ingresar
+          br
+          br
+          div
+            a.text-muted(href='./recuperarContraseña/recuerda_contraseña_aprendiz.html') &iquest;Olvidaste tu contrase&ntilde;a?
+          br
+          br
+          div
+            a.btn.btn-outline-primary(href='/') Cambiar rol
+br
+br
+//- script(src='/static/js/app.js')
+//- // <input id="btn_Submit" type="button" onclick="CallCatcha();" value="Buscar" disabled="disabled" class="btn btn-default">
+include ../layout/footer

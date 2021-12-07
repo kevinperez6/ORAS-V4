@@ -1,0 +1,205 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/Horarios.css')
+  title Mis Actividades
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png' alt='Logo ORAS')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='homePageInstructor') Inicio
+        li.nav-item
+          a#usar.nav-link(href='/') Cerrar Secion
+.container
+  br
+  br
+  .d-flex
+    span
+      img(src='imagenes/activity.png' width='30' alt='')
+    h3 Mis actividades
+  p.text-muted
+    | Permite gestionar, programar y administrar sus actividades mediante el
+    | calendario
+  .row
+    .col-12.section-form-group
+      section.d-flex
+        .col-4
+          h5
+            strong Mostrar semana
+          select#sel1.form-control.form-inputs(name='sellist1')
+            option 23/09/2021
+            option 24/09/2021
+            option 28/09/2021
+            option 31/09/2021
+        .col-4
+          h5
+            strong Hora de inicio
+          select#sel1.form-control.form-inputs(name='sellist1')
+            option 6:15 A.M.
+            option 7:00 A.M.
+            option 7:15 A.M.
+            option 8:00 A.M.
+        .col-4
+          h5
+            strong Hora de fin
+          select#sel1.form-control.form-inputs(name='sellist1')
+            option 12:00 P.M.
+            option 12:30 P.M.
+            option 3:00 P.M.
+            option 5:00 P.M.
+      br
+      a.mx-auto.d-block.btn.btn-outline-primary(href='') Actualizar calendario
+  br
+  br
+  .row
+    .col-12
+      .d-flex
+        span
+          img(src='imagenes/check.png' alt='')
+        h3.ml-2 Calendario
+      p.text-muted.w-75
+        | Aqu&iacute; puedes visualizar el horario seg&uacute;n tus asignaturas, cursos
+        | complementarios u otros programas registrados en tu ficha. Ingl&eacute;s,
+        | Promover, Cultura F&iacute;sica, etc.
+      .section-horario
+        table.table.table-bordered
+          thead
+            tr
+              th.Horario.text-center.text-dark Hora
+              th.Horario.text-center.text-dark Lunes
+              th.Horario.text-center.text-dark Martes
+              th.Horario.text-center.text-dark Mi&eacute;rcoles
+              th.Horario.text-center.text-dark Jueves
+              th.Horario.text-center.text-dark Viernes
+              th.Horario.text-center.text-dark S&aacute;bado
+              th.Horario.text-center.text-dark Domingo
+          tbody
+            tr
+              td.Horario.text-center.text-dark 6:00AM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 7:00AM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 8:00AM
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 9:00AM
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 10:00AM
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 11:00AM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 12:00PM
+              td
+              td
+              td
+              td.CULTURA CULTURA FISICA
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 1:00PM
+              td
+              td
+              td
+              td.CULTURA CULTURA FISICA
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 2:00PM
+              td
+              td.INGLES INGLES
+              td
+              td.CULTURA CULTURA FISICA
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 3:00PM
+              td
+              td.INGLES INGLES
+              td
+              td
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 4:00PM
+              td
+              td.INGLES INGLES
+              td
+              td
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 5:00PM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td.Horario.text-center.text-dark 6:00PM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+  br
+  a.btn.btn-outline-success.w-25(href='#') A&ntilde;adir actividad
+  a.btn.btn-outline-danger(href='homePageInstructor') Cancelar y volver
+br

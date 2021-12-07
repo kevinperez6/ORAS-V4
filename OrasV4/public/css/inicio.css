@@ -1,0 +1,8 @@
+:root{
+    --gris:#fff;
+    --morado:#87017B;
+}
+
+navbar{
+    background-color: var(--morado);
+}

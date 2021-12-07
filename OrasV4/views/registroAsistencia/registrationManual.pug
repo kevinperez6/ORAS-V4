@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/cambio_contraseña.css')
+  title Control y registro
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='http://127.0.0.1:8000/instructor_vista_Uno') Inicio
+        li.nav-item
+          a#usar.nav-link(href='http://127.0.0.1:8000/') Cerrar Sesion
+main
+  .container
+    br
+    .d-flex
+      span
+        img(src='imagenes/consult.png' alt='auto')
+      h3.ml-2 Registro manual
+    p.text-muted.w-75
+      | En este espacio se podr&aacute; registrar manualmente la asistencia de los
+      | aprendices que no cuenten con los medios para usar el sistema
+    .row
+      .col-10
+        section.table-section
+          table.table
+            thead
+              tr
+                th ID DE REGISTRO
+                th FECHA DE REGISTRO
+                th ID DE USUARIO
+                th ESTADO DE ASISTENCIA
+            tbody
+              tr
+                td 12598
+                td 24/09/2021
+                td
+                  select#sel1.form-control(name='sellist1')
+                    option 2024373
+                    option 2025981
+                td
+                  select#sel1.form-control.w-75(name='sellist1')
+                    option Asisti&oacute;
+                    option No asisti&oacute;
+                    option Inasistencia justificada
+          h4 Observaci&oacute;n
+          p
+            | El aprendiz no cuenta con los recursos para el uso del sistema
+        br
+        a.btn.btn-success(href='http://127.0.0.1:8000/Registro_Instructor') Guardar
+        a.btn.btn-outline-danger(href='http://127.0.0.1:8000/Registro_Instructor') Cancelar

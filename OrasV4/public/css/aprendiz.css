@@ -1,0 +1,94 @@
+:root {
+    --azulMar    : #0097A7;
+    --blanco     : #ffffff;
+    --negro      : #212121;
+    --violeta    : #27085e;
+    --gris       : #bbb9b9;
+    --dark       : #16191c;
+    --coll       :#ececec;
+    --azul-turquesa :#03989E;
+    --sds:#826B86;
+    --principal :#50b4b2;
+    
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Inter', sans-serif;
+
+}
+.pantallaUno{
+  background-color:var(--coll) ;
+}
+.logo-brand{
+    min-width: 150px;
+    max-width: 80px;
+  /*width: 25px;%;*/
+}
+.navbar {
+background:var(--azul-turquesa);
+color:var(--negro);
+}
+a{
+  font-size: 18px;
+  font-weight: 500;
+<<<<<<< HEAD
+  color: #5a5a5a;
+=======
+  text-align: center;
+>>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
+}
+a:hover{
+  text-decoration: none;
+}
+hr{
+  width: 50%;
+}
+.card{
+border-radius: 0.4rem;
+}
+.carta-one{
+border-left: 4px solid var(--azul-turquesa);
+border-radius: 0.4rem;
+}
+.card:hover{
+	box-shadow: 0px 0px 5px 1px #0000004d;
+}
+.section-nev{
+	box-shadow: 0px 0px 5px 1px #0000004d;
+  border-radius: 0.4rem;
+  padding: 30px;
+}
+.carta-two{
+  border-left: 4px solid #a347e8b0;
+  border-radius: 0.4rem;
+}
+.carta-three{
+  border-left: 4px solid #f9783aa1;
+  border-radius: 0.4rem;
+}
+.carta-four{
+ border-left: 4px solid green; 
+ border-radius: 0.4rem;
+<<<<<<< HEAD
+=======
+}
+@media(max-width: 700px){
+  a{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(90, 90, 221);
+  }
+  .section-aprendiz{
+    border: none !important;
+  }
+  .texto-instructivo{
+    font-size: 25px;
+  }
+  .section-inters{
+    box-shadow: 0px 0px 5px 1px #0000004d;
+    background-color: #fff;
+  }
+>>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
+}

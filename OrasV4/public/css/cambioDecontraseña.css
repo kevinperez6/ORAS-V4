@@ -1,0 +1,67 @@
+body {
+background:#ececec;
+}
+.change-password{
+  font-family: 'Inter', sans-serif;
+}
+.navbar {
+background-color: #03989e;
+min-height: 80px;
+}
+.logo-brand { 
+min-width: 150px;
+max-width: 80px;
+}
+.section-password{
+  background-color: #fff;
+  padding: 50px;
+  box-shadow: 0px 0px 8px -1px #00000052;
+  border-radius: 0.3rem;
+  }
+.boton-password{
+  padding: 10px;
+  border: 2px solid #03989e;
+  background: none;
+}
+.boton-password:hover{
+  background-color: #03989e;
+  color: #fff;
+}
+<<<<<<< HEAD
+hr{
+  width: 50%;
+=======
+.form-password{
+  border-radius: 0;
+}
+.section-botons{
+  margin-top: 3rem;
+}
+hr{
+  width: 50%;
+}
+@media(max-width:670px){
+  .change-password{
+    font-size: 22px;
+  }
+  .text-read{
+    font-size: 15px;
+  }
+  .section-password{
+    padding: 25px;
+  }
+  a.boton-password{
+   color: #000; 
+   display: flex;
+   justify-content: center;
+  }
+  .boton-cancel{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .form-password{
+    border-radius: 0;
+  }
+>>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
+}

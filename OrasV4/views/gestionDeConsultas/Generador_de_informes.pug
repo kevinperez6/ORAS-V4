@@ -1,0 +1,136 @@
+doctype html
+| {% load static %}
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/Generador_Informres.css')
+  title Gestion de Consultas
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='http://127.0.0.1:8000/instructor_vista_Uno') Inicio
+        li.nav-item
+          a#usar.nav-link(href='http://127.0.0.1:8000/') Cerrar sesi&oacute;n
+// Main
+main
+  .container
+    br
+    br
+    h2 GESTI&Oacute;N DE CONSULTAS E INFORMES GENERALES
+    .span-info
+      span
+        img(src='img/info.png' width='25' alt='')
+      p.text-muted.ml-2
+        | Permite ejecutar, crear y gestionar consultas e informes
+    hr
+    .row
+      .col-12.mx-auto.d-block
+        h4 Visor de informes y consultas
+        p.text-muted.w-75
+          | Ingrese los datos que tenga y pulse Buscar. Deje los campos en
+          | blanco para obtener todos los resultados y valores
+        section.d-flex.align-items-center.section-info
+          .col-4
+            label(for='sel1')
+              h5 Buscar por
+            select#sel1.form-control.info-form(name='sellist1')
+              option Nombre de informe
+              option 2
+              option 3
+              option 4
+          .col-4
+            label(for='sel1')
+              h5 Empieza por
+            select#sel1.form-control.info-form(name='sellist1')
+              option 1
+              option 2
+              option 3
+              option 4
+          .col-4
+            label(for='sel1')
+              h5 Seleccionar ficha
+            select#sel1.form-control.info-form(name='sellist1')
+              option 2024373
+              option 2021578
+    br
+    br
+    h4 Mejores resultados de la b&uacute;squeda
+    p.text-muted
+      | Aqu&iacute; est&aacute;n los mejores resultados seg&uacute;n tus datos inscritos
+    br
+    .row
+      .col-12.mx-auto.d-block
+        section.table-section
+          table.table
+            thead
+              tr
+                th SEDE
+                th Trimestre
+                th Clase
+                th ID Origen Datos
+                th Formato
+                th Fecha
+                th Resultados
+            tbody
+              tr
+                td CEET
+                td
+                  select#sel1.form-control
+                    option I
+                    option II
+                    option III
+                    option IV
+                    option V
+                td ADSI
+                td SENA_CLASES_VIRTU
+                td
+                  select#sel1.form-control
+                    option PDF
+                    option EXCEL
+                td
+                  select#sel1.form-control
+                    option 22/09/2021
+                    option 22/09/2021
+                    option 22/09/2021
+                    option 22/09/2021
+                    option 22/09/2021
+                td
+                  a(href='')
+                    button.btn.text-primary Ver informe
+              tr
+                td CEET
+                td
+                  select#sel1.form-control
+                    option I
+                    option II
+                    option III
+                    option IV
+                    option V
+                td ADSI
+                td SENA_CLASES_VIRTU
+                td
+                  select#sel1.form-control
+                    option PDF
+                    option EXCEL
+                td
+                  select#sel1.form-control
+                    option 22/09/2021
+                    option 22/09/2021
+                    option 22/09/2021
+                    option 22/09/2021
+                    option 22/09/2021
+                td
+                  a(href='')
+                    button.btn.text-primary Ver informe
+          a(href='#')
+            button.btn.btn-success Iniciar Busqueda
+          a.btn.btn-outline-danger(href='http://127.0.0.1:8000/instructor_vista_Uno') Cancelar
+        br

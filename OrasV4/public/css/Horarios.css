@@ -1,0 +1,99 @@
+:root {
+  --gris2         :#f0f2f5;
+  --blanco        :#ffffff;
+  --Rojo_Pastel   :#cf5252;
+  --Morado        :#6d3ac5;
+  --gris          :#bbb9b9;
+  --coll          :#ececec;
+  --azul-turquesa :#03989E;
+  --sds           :#826B86;
+  --Violeta       :#b22adb;
+  --azul2         :#0275f0;
+  --azul3         :#4774bf;
+  --Verde         :#0cc94e;
+}
+.inicio {
+  color:var(--negro);
+  background-color:var(--blanco);
+  }
+
+.Formularios{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color:var(--negro);
+  background-color:var(--blanco) ;
+}
+h1,h2,h3{
+  font-family: 'Inter', sans-serif;
+}
+.pantallaUno{
+color:var(--dark) ;
+background-color:var(--coll) ;
+
+}
+
+.logo-brand{
+  min-width: 150px;
+  max-width: 80px;
+/*width: 25px;%;*/
+}
+
+.navbar {
+  background:var(--azul-turquesa);
+  color:var(--negro);
+}
+.Horario{
+  background-color:var(--gris2);
+  color:var(--azul3);
+}  
+
+.ADSI{
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px -1px #00000052;
+  background-color: #3c85ff5c;
+  text-align: center;
+  font-weight: bold;
+}
+.INGLES{
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px -1px #00000052;
+  background-color: #ffc1077a;
+  text-align: center;
+  font-weight: bold;
+}
+.CULTURA{
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 8px -1px #00000052;
+  background-color: #ff3c3c5c;
+  text-align: center;
+  font-weight: bold;
+}
+.section-inputs{
+  display: flex;
+}
+.section-form-group{  
+  box-shadow: 0px 0px 8px -1px #00000052;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  align-items: center;
+  padding: 25px;
+}
+.form-inputs{
+  border-radius: 0px;
+  width: 70%;
+}
+.section-horario{
+  box-shadow: 0px 0px 8px -1px #00000052;
+  border-radius: 0.6rem;
+<<<<<<< HEAD
+=======
+}
+@media(max-width: 675px){
+  .text-semana{
+    font-size: 15px;
+  }
+  .text-horario{
+    width: 100% !important;
+  }
+>>>>>>> a6624d41bcd28b0e84784ff2661204426464e7b9
+}

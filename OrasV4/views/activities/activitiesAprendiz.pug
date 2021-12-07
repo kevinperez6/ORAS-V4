@@ -1,0 +1,202 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/Horarios.css')
+  title Mis Actividades
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='/homePageAprendiz') Inicio
+        li.nav-item
+          a#usar.nav-link(href='/') Cerrar Sesion
+.container
+  br
+  br
+  .d-flex
+    span
+      img(src='img/activity.png' width='30' alt='')
+    h3 Mis actividades
+  p.text-muted
+    | Permite gestionar, programar y administrar sus actividades mediante el
+    | calendario
+  .row
+    .col-12.section-form-group
+      section.d-flex
+        .col-4
+          h5
+            strong Mostrar semana
+          select#selectSemana.form-control.form-inputs(name='selectSemana')
+            option Seleccione
+        .col-4
+          h5
+            strong Hora de inicio
+          select#inicio.form-control.form-inputs(name='inicio')
+            option Seleccione
+        .col-4
+          h5
+            strong Hora de fin
+          select#fin.form-control.form-inputs(name='fin')
+            option Seleccione
+      br
+      a(href='')
+        button.mx-auto.d-block.btn.btn-outline-primary
+          | Actualizar calendario
+  br
+  br
+  .row
+    .col-12
+      .d-flex
+        span
+          img(src='img/check.png' alt='Logo Formulario')
+        h3.ml-2 Calendario
+      p.text-muted.w-75
+        | Aqu&iacute; puedes visualizar el horario seg&uacute;n tus asignaturas, cursos
+        | complementarios u otros programas registrados en tu ficha. Ingl&eacute;s,
+        | Promover, Cultura F&iacute;sica, etc.
+      .section-horario
+        table.table.table-bordered
+          thead
+            tr
+              th.Horario.text-center.text-dark Hora
+              th.Horario.text-center.text-dark Lunes
+              th.Horario.text-center.text-dark Martes
+              th.Horario.text-center.text-dark Mi&eacute;rcoles
+              th.Horario.text-center.text-dark Jueves
+              th.Horario.text-center.text-dark Viernes
+              th.Horario.text-center.text-dark S&aacute;bado
+              th.Horario.text-center.text-dark Domingo
+          tbody
+            tr
+              td#06-1.Horario.text-center.text-dark 6:00AM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td#07-1.Horario.text-center.text-dark 7:00AM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td#08-1.Horario.text-center.text-dark 8:00AM
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td
+            tr
+              td#09-1.Horario.text-center.text-dark 9:00AM
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td
+            tr
+              td#10-1.Horario.text-center.text-dark 10:00AM
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td.ADSI ADSI
+              td
+              td
+            tr
+              td#11-1.Horario.text-center.text-dark 11:00AM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td#12-1.Horario.text-center.text-dark 12:00PM
+              td
+              td
+              td
+              td.CULTURA CULTURA FISICA
+              td
+              td
+              td
+            tr
+              td#01-1.Horario.text-center.text-dark 1:00PM
+              td
+              td
+              td
+              td.CULTURA CULTURA FISICA
+              td
+              td
+              td
+            tr
+              td#02-1.Horario.text-center.text-dark 2:00PM
+              td
+              td.INGLES INGLES
+              td
+              td.CULTURA CULTURA FISICA
+              td
+              td
+              td
+            tr
+              td#03-1.Horario.text-center.text-dark 3:00PM
+              td
+              td.INGLES INGLES
+              td
+              td
+              td
+              td
+              td
+            tr
+              td#04-1.Horario.text-center.text-dark 4:00PM
+              td
+              td.INGLES INGLES
+              td
+              td
+              td
+              td
+              td
+            tr
+              td#05-1.Horario.text-center.text-dark 5:00PM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+            tr
+              td#06-1.Horario.text-center.text-dark 6:00PM
+              td
+              td
+              td
+              td
+              td
+              td
+              td
+  br
+  a(href='#')
+    button.btn.btn-outline-success.w-25 A&ntilde;adir Actividad
+  a(href='/homePageAprendiz')
+    button.btn.btn-outline-danger Cancelar y volver
+br
+script(src='/templates/Actividades/js/01-app.js')
+script(src='/templates/Actividades/js/datosDePrueba.js')

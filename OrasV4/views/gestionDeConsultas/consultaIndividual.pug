@@ -1,0 +1,74 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
+  link(href='css/style_busqueda.css' rel='stylesheet')
+  title Gesti&oacute;n de consultas individuales
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src="img/1.png")
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='homePageInstructor') Inicio
+        li.nav-item
+          a#usar.nav-link(href='/') Cerrar sesi&oacute;n
+.container
+  .row
+    .col-12
+      span
+        img(src='img/profile.png' width='35' alt='')
+      h2 Consultas individuales
+      form.formulario
+        h5.text-muted Ingrese el ID del aprendiz
+        br
+        div(classs='input-container')
+          ion-icon(name='search')
+          input(type='number' placeholder='Documento del aprendiz')
+        br
+        h5 Modulo/ Trimestre 1
+        select
+          option(values='1') I
+          option(values='2') II
+          option(values='3') III
+          option(values='4') IV
+      br
+      section.section-formul
+        table.table
+          thead
+            tr
+              th(scope='col') Nombre
+              th(scope='col') Apellido
+              th(scope='col') ficha
+              th(scope='col') Cod registro asistencia
+              th(scope='col') Fecha
+              th(scope='col') Estado
+              th(scope='col') Novedad
+          tbody
+            tr
+              td Brandon
+              td Pe&ntilde;a
+              td 2024373
+              td 2564
+              td 05/03/21
+              td NO asisti&oacute;
+              td(colspan='2') Excusa m&eacute;dica
+            tr
+              td Brandon
+              td Pe&ntilde;a
+              td 2024373
+              td 3655
+              td 06/03/21
+              td asistio
+              td(colspan='2')
+      form.formulario
+        .container
+          a.btn.btn-success(type='submit' href='#') Iniciar busqueda
+          a.btn.btn-danger(type='submit' href='gestionDeConsultas') Cancelar
+      br

@@ -1,0 +1,121 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='css/Gestion_de_consultas.css')
+  title Gestion de Consultas
+nav.navbar.navbar-expand-lg.navbar-light
+  .container
+    a.navbar-brand
+      img.logo-brand(src='img/1.png')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a#home.nav-link(href='homePageInstructor') Inicio
+        li.nav-item
+          a#usar.nav-link(href='/') Cerrar Sesion
+.container
+  .row
+    .col-12
+      section
+        .row
+          .col-12.mt-5
+            h2
+              img.iimg(src='img/consult.png' alt='')
+              | GESTION DE CONSULTAS DE INFORMES GENERALES
+            hr
+            div
+              h5  Visor Informes y Consultas
+              p.text-muted
+                | Introduzca los datos que tenga y pulse en &quot;Buscar&quot;. Deje los campos en blanco para obtener todos los valores
+              .col-12
+                section.d-flex
+                  .col-4
+                    label(for='sel1')
+                      h5 Buscar por:
+                    select#sel1.form-control(name='sellist1')
+                      option Nombre de informe
+                      option 2
+                      option 3
+                      option 4
+                  .col-4
+                    label(for='sel1')
+                      h5 Empieza por:
+                    input#sel1.form-control(name='sellist1' placeholder='')
+                  .col-4
+                    label(for='')
+                      h5 Seleccionar ficha
+                    select#sel1.form-control(name='sellist1')
+                      option 2024373
+                      option 2
+                      option 3
+                      option 4
+                br
+                .table.section-table
+                  table.table.table-striped.table-sm
+                    thead
+                      tr
+                        th Sede
+                        th Trimestre
+                        th Descripcion
+                        th Formato
+                        th Fecha
+                        th Ver Informe
+                    tbody
+                      tr
+                        td Centro de electricidad CEET
+                        td
+                          div(classs='input-container')
+                            select.select
+                              option(values='PDF') 1
+                              option(values='XLS') 2
+                              option(values='XLS') 3
+                        td CLASE ADSI
+                        td
+                          div(classs='input-container')
+                            select.select
+                              option(values='PDF') PDF
+                              option(values='XLS') XLS
+                        td
+                          div(classs='input-container')
+                            select.select
+                              option(values='PDF') 01/26/2020
+                              option(values='XLS') 01/28/2020
+                              option(values='XLS') 01/29/2020
+                            td
+                              a(href='#') Ver Informe
+                      tr
+                        td Centro de Electricidad CEET
+                        td
+                          div(classs='input-container')
+                            select.select
+                              option(values='PDF') 1
+                              option(values='XLS') 2
+                              option(values='XLS') 3
+                            td CLASE ADSI
+                            td
+                              div(classs='input-container')
+                                select.select
+                                  option(values='PDF') PDF
+                                  option(values='XLS') XLS
+                            td
+                              div(classs='input-container')
+                                select.select
+                                  option(values='PDF') 01/26/2020
+                                  option(values='XLS') 01/28/2020
+                                  option(values='XLS') 01/29/2020
+                                td
+                                  a(href='#') Ver Informe
+              br
+              br
+              a.btn.btn-success(href='#') Iniciar b&uacute;squeda
+              a.btn.btn-outline-danger(href='GestionDeConsultas') Cancelar
+              br
+              br
+          br
+          br

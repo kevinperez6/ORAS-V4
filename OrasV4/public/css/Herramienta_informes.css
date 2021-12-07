@@ -1,0 +1,95 @@
+:root {
+    --amarillo   : #ffc107;
+    --azulMar    : #0097A7;
+    --rojoPastel : #ad0c0c;
+    --blanco     : #ffffff;
+    --negro      : #212121;
+    --violeta    : #27085e;
+    --gris       : #bbb9b9;
+    --dark       : #16191c;
+    --coll       :#ececec;
+    --azul-turquesa :#03989E;
+    --sds:#826B86;
+  }
+  
+   
+   .inicio {
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: 700;
+    color:var(--negro) ;
+    background-color:var(--blanco);
+     
+   }
+  
+  
+   .pantallaUno{
+    font-family: 'RocknRoll One', sans-serif;
+    font-weight: 700;
+    color:var(--dark) ;
+    background-color:var(--coll) ;
+   
+   }
+  
+   .logo-brand{
+     min-width: 150px;
+     max-width: 80px;
+    /*width: 25px;%;*/
+  }
+  
+  .navbar {
+    background:var(--azul-turquesa);
+    color:var(--negro);
+  }
+  
+  
+  .logo{
+    min-width: 80px;
+     max-width: 120px;
+  }
+  
+  img{
+    min-width: 80px;
+    max-width: 120px;
+  }
+  
+  .imgg{
+    min-width: 20px;
+    max-width: 30px;
+  }
+  .iimg{
+    min-width: 80px;
+    max-width: 40px;
+  }
+  span{
+    color:transparent ;
+  }
+  a:hover{
+    color:var(--sds);
+  }
+  a{
+    font-family: 'RocknRoll One', sans-serif;
+   font-weight: 700;
+  }
+  footer{
+    background:var(--sds);
+    width: 100% ;
+    padding: 0.5px ;
+    min-height: calc(100vh - 400px);
+  }
+  .pie-pagina{
+    text-align: center;
+  }
+  
+  button:hover{
+    color:var(--sds) ;
+    justify-content: end;
+    
+  }
+  
+  
+  .alert{
+    background-color:var(--gris) ;
+    color:var(--blanco);
+   }
+  
+  
