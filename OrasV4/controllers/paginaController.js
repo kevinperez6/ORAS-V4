@@ -57,8 +57,8 @@ const systemProfileApre = (req, res) => {
     res.render('./perfilSistema/systemProfileApre');
 };
 
-const systemProfileSuper = (req, res) => {
-    res.render('./perfilSistema/systemProfileSuper');
+const systemProfileAdmin= (req, res) => {
+    res.render('./perfilSistema/systemProfileAdmin');
 };
 
 // const actividadesInstructor = (req, res) => {
@@ -109,11 +109,16 @@ const gestionDeConsultas = (req, res) => {
     res.render('./gestionDeConsultas/gestionDeConsultas');
 }
 
+const consultaIndividual = (req, res) => {
+    res.render('./gestionDeConsultas/consultaIndividual');
+}
+
 const consultaGeneral = (req, res) => {
     res.render('./gestionDeConsultas/consultaGeneral');
 }
-const consultaIndividual = (req, res) => {
-    res.render('./gestionDeConsultas/consultaIndividual');
+
+const registro = (req, res) => {
+    res.render('./Registration/userRegistration');
 }
 
 
@@ -130,7 +135,7 @@ module.exports = {
     changePasswordAdmin,
     systemProfileInst,
     systemProfileApre,
-    systemProfileSuper,
+    systemProfileAdmin,
     homePageInstructor,
     homePageAprendiz,
     homePageAdmin,
@@ -143,4 +148,5 @@ module.exports = {
     gestionDeConsultas,
     consultaIndividual,
     consultaGeneral,
+    registro,
 }

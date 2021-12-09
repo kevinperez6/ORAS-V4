@@ -1,18 +1,16 @@
- 
 doctype html
 head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
   link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
-  link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
   link(href='/css/styleIngreso.css' rel='stylesheet')
+  script(src='js/app.js')
   title Ingreso de instructor
 nav.navbar.navbar-expand-lg
   .container
     a.navbar-brand
-      img.logo-brand(src='img/1.png' alt='Logo ORAS')
-br
+      img.logo-brand(src='img/1.png')
 br
 .container
   br
@@ -21,24 +19,25 @@ br
     .row
       section.section-login
         br
-        span.text-center.material-icons-outlined
-          img.mx-auto.d-block(width='30' src='img/profile.png' alt='Logo Instructor')
-          p.text-muted Instructor
+        div
+          span.text-center.material-icons-outlined
+            img.mx-auto.d-block(width='30' src='img/profile.png' alt='auto')
+            p.text-muted Instructor
         .col-sm-12
           p.welcome-text &iexcl;Hola, instructor!
           h2.text-login
             strong Iniciar sesi&oacute;n
-          p.text-muted.w-75
+          p.text-muted.w-70
             | Aqu&iacute; puedes hacer consultas y realizar diferentes acciones en lo
             | que se considere la ficha de la formaci&oacute;n en la que a ti se te
             | asign&oacute;
           hr
           br
-          form#enviar-email(action='ingresoInstructor' method="POST")
+          form#enviar-email(action='/ingresoInstructor' method="POST")
             .form-group
               label(for='email')
                 h5 Correo electr&oacute;nico
-              input#email.form-control.form-one(type='email' placeholder='Correo' name='email')
+              input#email.form-control.form-one(type='email' placeholder='Correo misena' name='email')
             br
             .form-group
               label(for='pwd')
@@ -53,19 +52,17 @@ br
                 option Ingl&eacute;s
             div
               button#enviar.boton-one-form(type='submit' role='button') Ingresar
-            br
-            a.text-muted(href='recuerda_contraseña_instructor.html')
-              | &iquest;Olvid&oacute; su
-              | contrase&ntilde;a?
-            br
-            br
+          br
+          div
+            a.text-muted(href='recoverPasswordInstructor') &iquest;Olvidaste tu contrase&ntilde;a?
+          br
+          div
             a.btn.btn-outline-primary.mb-3(href='/') Cambiar rol
-             
 br
-//- script(src='/static/js/02-app.js')
-
+br
+//- script(src='/static/js/app.js')
+//- // <input id="btn_Submit" type="button" onclick="CallCatcha();" value="Buscar" disabled="disabled" class="btn btn-default">
 include ../layout/footer
-
 
 
 

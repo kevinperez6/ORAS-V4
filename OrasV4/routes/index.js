@@ -13,7 +13,7 @@ const {inicio,
   changePasswordAdmin,
   systemProfileInst,
   systemProfileApre,
-  systemProfileSuper,
+  systemProfileAdmin,
   homePageInstructor,
   homePageAprendiz,
   homePageAdmin,
@@ -26,9 +26,13 @@ const {inicio,
   gestionDeConsultas,
   consultaGeneral,
   consultaIndividual,
+  registro,
 } = require('../controllers/paginaController.js'); 
 
 const { authenticationInstructor,authenticationAprendiz,authenticationAdmin} = require('../controllers/authentication.js')
+const{
+  registrationUser
+} = require ('../controllers/registration.js')
 
 
 const router = Router();
@@ -61,7 +65,7 @@ router.get('/systemProfileInst',systemProfileInst);
 
 router.get('/systemProfileApre',systemProfileApre);
 
-router.get('/systemProfileSuper',systemProfileSuper);
+router.get('/systemProfileAdmin',systemProfileAdmin);
 
 router.get('/homePageInstructor',homePageInstructor);
 
@@ -86,6 +90,9 @@ router.get('/gestionDeConsultas', gestionDeConsultas);
 router.get('/consultaGeneral', consultaGeneral);
 
 router.get('/consultaIndividual', consultaIndividual);
+
+router.get('/registro', registro);
+router.post('/registro', registrationUser);
 
 
 
