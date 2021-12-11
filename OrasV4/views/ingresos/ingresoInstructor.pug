@@ -33,16 +33,16 @@ br
             | asign&oacute;
           hr
           br
-          form#enviar-email(action='/ingresoInstructor' method="POST")
+          form#enviar-email(action='/auth' method="POST")
             .form-group
               label(for='email')
                 h5 Correo electr&oacute;nico
-              input#email.form-control.form-one(type='email' placeholder='Correo misena' name='email')
+              input#email.form-control.form-one(type='email' placeholder='Correo misena' name='Email')
             br
             .form-group
-              label(for='pwd')
+              label(for='password')
                 h5 Contrase&ntilde;a
-              input#pwd.form-control.form-one(type='password' placeholder='Contraseña' name='password')
+              input#pwd.form-control.form-one(type='password' placeholder='Contraseña' name='Contraseña')
             br
             .form-group
               label(for='sel1')

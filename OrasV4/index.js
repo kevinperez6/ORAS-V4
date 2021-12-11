@@ -45,7 +45,7 @@ app.set('view engine', 'pug');
 const bcryptjs = require('bcryptjs');
 
 // - Var. de session
-const session = require('express-session')
+const session = require('express-session');
 app.use(session({
     secret: 'secret',// Clave secreta
     resave: true,
@@ -71,3 +71,60 @@ app.listen(port, () => {
 
 
 
+router.post('/auth',async(req, res) =>{
+    const Email = req.body.Email;
+    const Contraseña = req.body.Contraseña;
+    let passwordHaash = await bcryptjs.hash(Contraseña, 10);
+    if(Email && Contraseña){
+        db.query('SELECT * FROM usuario WHERE Email = ? ', [Email], async (error, results)=>{
+          if(results.length == 0 || !(await bcryptjs.compare(Contraseña, results[0].Contraseña))){
+                res.send("Usuario o password incorrecto")
+        }else{
+         res.send("Ingreso exitoso")
+      }
+    })
+    }
+  })    
+
+
+
+router.post('/homePageAdmin',async(req, res) =>{
+    // const documentos = req.body.documentos;
+    // const document = req.body.document;
+    const firstName = req.body.firstName;
+    const secondName = req.body.secondName;
+    const surname = req.body.surname;
+    const secondSurname = req.body.secondSurname;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    // const foto = req.body.foto;
+    // const campus = req.body.campus;
+    // const title = req.body.title;
+    // const file = req.body.file;
+    // const workday = req.body.workday;
+    const password = req.body.password
+    let passwordHaash = await bcryptjs.hash(password, 8);
+    // const rol = req.body.rol;
+    db.query('INSERT INTO usuario SET ?', {
+        // Tipo_Doc:documentos,
+        // ID_Usuario:document,
+        Primer_Nombre:firstName,
+        Segundo_Nombre:secondName,
+        Primer_Apellido:surname,
+        Segundo_Apellido:secondSurname,
+        Email:email,
+        Telefono:phone,
+        Contraseña:passwordHaash,
+        // Foto:foto,
+        // Rol:rol,
+        // jornada: workday
+     }, async(error, results) =>{
+         if(error){
+             console.log(error);
+         }else{
+            res.send('Envio exitoso',{
+                alert:true
+            })
+         }
+     })
+})

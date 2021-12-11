@@ -11,6 +11,59 @@ const inicio = (req, res) => {//req- es lo que el usuario envia, res: es lo que 
     res.render('./inicio');//Respuesta de la pagina  
 
 };
+// const registro = async(req, res) =>{
+//     const type = req.body.type;
+//     // const document = req.body.document;
+//     const fisrtName = req.body.fisrtName;
+//     const secondName = req.body.secondName;
+//     const surname = req.body.surname;
+//     const secondSurname = req.body.secondSurname;
+//     const email = req.body.email;
+//     const phone = req.body.phone;
+//     const foto = req.body.foto;
+//     // const campus = req.body.campus;
+//     // const title = req.body.title;
+//     // const file = req.body.file;
+//     // const workday = req.body.workday;
+//     let passwordHaash = await bcryptjs.hash(password, 8);
+//     const rol = req.body.rol;
+//     db.query('INSERT INTO usuario SET ?', {
+//         Tipo_Doc:type,
+//         // ID_Usuario:document,
+//         Primer_Nombre:fisrtName,
+//         Segundo_Nombre:secondName,
+//         Primer_Apellido:surname,
+//         Segundo_Apellido:secondSurname,
+//         Email:email,
+//         Telefono:phone,
+//         Contraseña:passwordHaash,
+//         Foto:foto,
+//         Rol:rol,
+//         // jornada: workday
+//      }, async(error, results) =>{
+//          if(error){
+//              console,log(error);
+//          }else{
+//             res.send('Envio exitoso')
+//          }
+//      })
+// }
+
+// const registrationUser 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const ingresoInstructor = (req, res) => {
     res.render('./ingresos/ingresoInstructor');
@@ -117,10 +170,9 @@ const consultaGeneral = (req, res) => {
     res.render('./gestionDeConsultas/consultaGeneral');
 }
 
-const registro = (req, res) => {
-    res.render('./Registration/userRegistration');
+const registro = (req, res)=>{
+    res.render('./registration/userRegistration')
 }
-
 
 module.exports = {
     inicio,

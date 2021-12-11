@@ -29,21 +29,21 @@ section.container
   .row.justify-content-center
     .col-sm-8
       section.form-section
-        form(action="/" method="POST")
+        form(action="homePageAdmin" method="POST")
           br
           .form-group
-              label(for='TP id')
+              label
                 h5 Tipo de documento
-              select.form-control.form(name="type ")
-                option(value='CC') C&eacute;dula de Ciudadania
-                option(value='TI') Tarjeta de Identidad
-                option(value='CE') C&eacute;dula de Extranjer&iacute;a
-                option(value='NCS') N&uacute;mero ciego SENA
-                option(value='PS') Pasaporte
-                option(value='DNI') Documento Nacional de Identificaci&oacute;n
-                option(value='NIT') N&uacute;mero de Identificaci&oacute;n Tributaria
-                option(value='PR') PEP - RAMV
-                option(value='PEP') PEP
+              input.form-control.form(type='number' name="documentos ")
+                //- option(value='CC' select="CC") 
+                //- option(value='TI') Tarjeta de Identidad
+                //- option(value='CE') C&eacute;dula de Extranjer&iacute;a
+                //- option(value='NCS') N&uacute;mero ciego SENA
+                //- option(value='PS') Pasaporte
+                //- option(value='DNI') Documento Nacional de Identificaci&oacute;n
+                //- option(value='NIT') N&uacute;mero de Identificaci&oacute;n Tributaria
+                //- option(value='PR') PEP - RAMV
+                //- option(value='PEP') PEP
               br
               .form-group.mb-3
               label(for='')
@@ -53,19 +53,18 @@ section.container
               label(for='TP id')
                 h5 Rol
               select.form-control.form(name="rol ")
-                option(value='1') Apendiz 
-                option(value='2') Instructor 
-                option(value='3') Administrativo
-                option(value='4') Acudiente
+                option(value='1', select='Aprendiz') Aprendiz
+                //- option(value='2') Instructor 
+                //- option(value='3') Administrativo
+                //- option(value='4') Acudiente
               br
           .form-group
           
             label
               h5 Primer Nombre
             input.form-control.form(type='text' name ='firstName' )
-            .form-group
-              br
-              .form-group
+            br
+              
             label
               h5 Segundo Nombre
             input.form-control.form(type='text' name ='secondName' )
@@ -74,7 +73,7 @@ section.container
               .form-group
             label
               h5 Primer Apellido
-            input.form-control.form(type='text' name ='suername' )
+            input.form-control.form(type='text' name ='surname' )
             .form-group
               br
               .form-group
@@ -87,8 +86,7 @@ section.container
               //- // agrupar label y otros conjuntos
               label(for='email')
                 h5 Correo electr&oacute;nico
-              input.form-control.form(type='email' placeholder='Ingrese correo electronico')
-              small.text-danger
+              input.form-control.form(type='email' name="email" placeholder='Ingrese correo electronico')
               //- // texto , danger
               br
               label
@@ -137,9 +135,9 @@ section.container
                 h5 Contraseña
               input.form-control.form(type='password' name="password")
               br
-            div
               button.boton-form(type='submit' ) Aceptar
-              a.btn.text-muted(type='submit' href='http://127.0.0.1:8000/instructor_vista_Uno') Volver
+              a.btn.text-muted(type='submit' href='/') Volver
+            div
             br
             br
       br
