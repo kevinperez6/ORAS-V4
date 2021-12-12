@@ -29,16 +29,16 @@ nav.navbar.navbar-expand-lg.navbar-light
       section.section-form-profile
         .d-flex
           span
-            img(src='img/territorium.png' alt='')
+            img(src='img/territorium.png' alt='Logo contraseña')
           h4.ml-2 Contrase&ntilde;a
         p.text-muted &iquest;Quieres cambiar tu contrase&ntilde;a?
-        a.btn.bg-primary.text-white(href='recoverPasswordAdmin') Cambiar contrase&ntilde;a
+        a.btn.bg-primary.text-white(href='changePasswordAdmin') Cambiar contrase&ntilde;a
         a.btn.text-primary(href='#') Ayuda de olvido de contrase&ntilde;a
         hr
         br
         .d-flex
           span
-            img(src='imagenes/info.png' alt='')
+            img(src='img/info.png' alt='Logo Configuración')
           h4.ml-2 Personalizaciones
           br
           br
@@ -65,8 +65,8 @@ nav.navbar.navbar-expand-lg.navbar-light
         h5.mt-4 Correo del usuario alternativo
         input.mt-3.form-control(type='email' placeholder='Correo de usuario alternativo')
         br
-        a.btn.btn-outline-primary(href='http://127.0.0.1:8000/Super_Usuario_Vista' type='submit') Aceptar
-        a.btn.text-danger(href='http://127.0.0.1:8000/Super_Usuario_Vista') Cancelar y volver
+        a.btn.btn-outline-primary(href='homePageAdmin' type='submit') Aceptar
+        a.btn.text-danger(href='homePageAdmin') Cancelar y volver
 br
 br
 include ../layout/footer
