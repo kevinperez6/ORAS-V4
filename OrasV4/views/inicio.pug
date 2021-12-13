@@ -10,7 +10,7 @@ head
   link(rel='preconnect' href='https://fonts.gstatic.com')
   link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
   script(src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js')
-  title ORAS
+  title Sistema Integrado de Gestión de Asistencia, ORAS.
 header
   nav.navbar.navbar-expand-lg
     .container
@@ -23,35 +23,34 @@ main
     br
     br
     h2.text-center &iquest;Qu&eacute; eres?
-    p.text-center Ingresa seg&uacute;n tu rol en el SENA
+    p.text-center.text-muted Ingresa seg&uacute;n tu rol en el SENA
     br
     .row
-      .col-sm-4
+      .col-sm-4.mt-3
         .card(style='width: 100%')
           img.card-img-top.image-overlay(src='img/instructor.jpg' alt='Card image' style='width: 100%')
           .card-body.overlay
-            h3.card-title Instructor
+            h4.card-title Instructor
             p.card-text.text-muted
-              | Puedes recibir consultas respecto a tu proceso en la ficha.
-              | Asistencia, inasistencia o inasistencias justificadas
+              | Puedes realizar consultas respecto a tu proceso en la ficha. Asistencias, inasistencias y/o inasistencias justificadas
             a.boton-overlay(href='/ingresoInstructor') Ingresar
       .col-sm-4.mt-3
         .card(style='width: 100%')
           img.card-img-top.image-overlay(src='img/aprendiz.jpg' alt='Card image' style='width: 100%')
           .card-body.overlay
-            h3.card-title Aprendiz
+            h4.card-title Aprendiz
             p.card-text.text-muted
-              | Realiza consultas respecto a la asistencia de cada uno de los
-              | aprendices de tu ficha correspondiente
+              | Obtiene consultas respecto a la asistencia de cada uno de los
+              | de las asignaturas y cursos complementarios de la formación
             a.boton-overlay(href='/ingresoAprendiz') Ingresar
       .col-sm-4.mt-3
         .card(style='width: 100%')
           img.card-img-top.image-overlay(src='img/adminLogin.jpg' alt='Card image' style='width: 100%')
           .card-body.overlay
-            h3.card-title Administrador
+            h4.card-title Administrador
             p.card-text.text-muted
               | Puedes editar, eliminar, actualizar o a&ntilde;adir a cualquier
-              | aprendiz dentro de tu ficha de formaci&oacute;n              
+              | aprendiz dentro de tu ficha de formaci&oacute;n y muchas más acciones             
             a.boton-overlay(href='/ingresoAdmin') Ingresar
 br
 include ./layout/footer
