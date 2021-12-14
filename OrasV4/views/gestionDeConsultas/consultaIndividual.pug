@@ -7,6 +7,11 @@ head
   link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
   link(href='css/style_busqueda.css' rel='stylesheet')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css')
+  link(rel='stylesheet', href='https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css')
+  link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css')
+
+  
   title Gesti&oacute;n de consultas individuales
 nav.navbar.navbar-expand-lg.navbar-light
   .container
@@ -25,20 +30,12 @@ nav.navbar.navbar-expand-lg.navbar-light
       span
       br
       h4 Consultas individuales
-      form.formulario
-        h5.text-muted Ingrese el ID del aprendiz
-        div(classs='input-container')
-          ion-icon(name='search')
-          input(type='number' placeholder='Documento del aprendiz')
+      form.table
+
         br
-        h5 Modulo/ Trimestre 1
-        select
-          option(values='1') Trimestre I
-          option(values='2') TrimestreII
-          option(values='3') TrimestreIII
-          option(values='4') Trimestre IV
+        
       section.section-formul
-        table.table
+        table#tabla.table.table-striped.table-bordered(style='width:100%')
           thead
             tr
               th(scope='col') Nombre
@@ -69,6 +66,9 @@ nav.navbar.navbar-expand-lg.navbar-light
       form.formulario
           a.btn.btn-primary(type='submit' href='#') Buscar
           a.btn.text-danger(type='submit' href='gestionDeConsultas') Cancelar
+
+
+include ../layout/datatables
 br
 br
 br

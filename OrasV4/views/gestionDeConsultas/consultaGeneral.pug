@@ -7,6 +7,9 @@ head
   link(href='https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap' rel='stylesheet')
   link(href='https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap' rel='stylesheet')
   link(rel='stylesheet' href='css/Gestion_de_consultas.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css')
+  link(rel='stylesheet', href='https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css')
+  link(rel='stylesheet', type='text/css', href='https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css')
   title Gestion de Consultas
 nav.navbar.navbar-expand-lg.navbar-light
   .container
@@ -33,30 +36,30 @@ nav.navbar.navbar-expand-lg.navbar-light
               h5 Visión de informes y consultas
               p.text-muted
                 | Introduzca los datos que tenga y pulse en &quot;Buscar&quot;. Deje los campos en blanco para obtener todos los valores
-                section.d-flex.align-items-center
-                  .col-sm-4
-                    label(for='sel1')
-                      p Buscar por:
-                    select#sel1.form-control(name='sellist1')
-                      option Nombre de informe
-                      option 2
-                      option 3
-                      option 4
-                  .col-sm-4
-                    label(for='sel1')
-                      p Empieza por:
-                    input#sel1.form-control(name='sellist1' placeholder='')
-                  .col-sm-4
-                    label(for='')
-                      p Seleccionar ficha
-                    select#sel1.form-control(name='sellist1')
-                      option 2024373
-                      option 2
-                      option 3
-                      option 4
+                //- section.d-flex.align-items-center
+                //-   .col-sm-4
+                //-     label(for='sel1')
+                //-       p Buscar por:
+                //-     select#sel1.form-control(name='sellist1')
+                //-       option Nombre de informe
+                //-       option 2
+                //-       option 3
+                //-       option 4
+                //-   .col-sm-4
+                //-     label(for='sel1')
+                //-       p Empieza por:
+                //-     input#sel1.form-control(name='sellist1' placeholder='')
+                //-   .col-sm-4
+                //-     label(for='')
+                //-       p Seleccionar ficha
+                //-     select#sel1.form-control(name='sellist1')
+                //-       option 2024373
+                //-       option 2
+                //-       option 3
+                //-       option 4
                 br
                 .table.section-table
-                  table.table.table-striped.table-sm
+                  table#tabla.table.table-striped.table-bordered(style='width:100%')
                     thead
                       tr
                         th Sede
@@ -118,4 +121,5 @@ nav.navbar.navbar-expand-lg.navbar-light
               br
           br
           br
+include ../layout/datatables
 include ../layout/footer
