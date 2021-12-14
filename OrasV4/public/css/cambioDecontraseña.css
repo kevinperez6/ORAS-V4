@@ -20,15 +20,42 @@ max-width: 80px;
   }
 .boton-password{
   padding: 10px;
-  color: #000;
+  color: solid #000;
   margin: 10px 0px;
   border: 2px solid #03989e;
   background: none;
 }
-.boton-password:hover{
+/* .boton-password:hover{
   background-color: #03989e;
   color: #fff;
-}
+} */
 hr{
   width: 50%;
+}
+
+.-error{
+  color:#df0b0b;
+  border: 1px solid;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  text-align: center; 
+}
+.campos{
+  /* color:#20b133; */
+  border: 1px solid #20b133 ;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  text-align: center; 
+}
+
+.btn-olvido{
+  text-align: center;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
+.opacity {
+  opacity: .1;
 }

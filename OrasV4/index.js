@@ -65,6 +65,7 @@ app.use(express.urlencoded({exyended: true}))
 //Agregar routes
 app.use('/', router);// Metodo app.use- soporta todos los metodos que se vallan agregando en routes
 
+//Starting the server
 app.listen(port, () => {
     console.log(`El servidor esta funcionando`);
 });
