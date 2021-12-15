@@ -1,8 +1,8 @@
 // const express = require('express')
 const  express = require('express'); //Se importa la libreria express
 const  router  = require('./routes/index.js');//Se importa la carpeta contenedora de las rutas, se tiene que agregar a app
-const  db = require('./config/db.js'); 
-const morgan = require('morgan');
+const PassportLocal = require('passport-local').Strategy
+const {database} = require('./config/db');
 
 // CORS 
 // const cors = require('cors');
@@ -18,49 +18,49 @@ import('./lib/passports.js');
 //Solo se puedo tener ungestor de aplicaciones, en este caso app
 
 
+//2- seteamos ulrencoded para caprturar los datos del formulario
+app.use(express.urlencoded({exyended: true}))
+app.use(express.json());
+
+//3 - Invocamos a dotenv
+const dotenv = require('dotenv');
+dotenv.config({path:'./env/.env'});
+
+
+//4 - Definimos la carpeta que contendra los arcivos estaticos, en este caso public
+app.use(express.static('public'));
+app.use(express.static(__dirname + 'public'));
+
+//5 - Establecemos el motor de plantillas PUG
+app.set('view engine', 'pug');
+
+//6 - Invocamos a bcryptjs
+const bcryptjs = require('bcryptjs');
+
+//7 - var session
+const session = require('express-session');
+app.use(session({
+    secret: 'Secreto',// Clave secreta
+    resave: true,//
+    saveUnitilized:true,//Si se inicializa una peticion sin guardar nada aun asi se va a guardar
+}));
+
+
+//8 - invocamos a la base de datos
+const  db = require('./config/db.js'); 
+
 //Definir puerto
 const port = process.env.PORT || 4000// Si existe un puerto desocupado utilizalo, de no ser asi, utiliza el puerto 4000
 
 //Conectar la base de datos
-db.connect(
-    (err)=>{
-        if(!err){
-            console.log("Conexion establecida");
-        }else{
-            console.log("No se establecio la conexion");
-        }
+db.connect((err)=>{
+    if(!err){
+        console.log("Conexion establecida");
+    }else{
+        console.log("No se establecio la conexion");
     }
+}
 );
-
-
-
-//Definimos la carpeta que contendra los arcivos estaticos, en este caso public
-app.use(express.static('public'));
-app.use(express.static(__dirname + 'public'));
-
-//Habilitar el motor de plantillas PUG
-app.set('view engine', 'pug');
-
-// - Invocamos a bcryptjs
-const bcryptjs = require('bcryptjs');
-
-// - Var. de session
-const session = require('express-session');
-app.use(session({
-    secret: 'secret',// Clave secreta
-    resave: true,
-    saveUnitilized:true
-}));
-
-
-//Middlewares
-// app.use( cors() );
-app.use(express.json());
-//Agregar body parser para leer los datos del formulario
-app.use(morgan('dev'));
-//Agregar boy parser para leer los datos del formulario
-app.use(express.urlencoded({exyended: true}))
-
 
 //Agregar routes
 app.use('/', router);// Metodo app.use- soporta todos los metodos que se vallan agregando en routes
@@ -70,22 +70,6 @@ app.listen(port, () => {
     console.log(`El servidor esta funcionando`);
 });
 
-
-
-router.post('/auth',async(req, res) =>{
-    const Email = req.body.Email;
-    const Contraseña = req.body.Contraseña;
-    let passwordHaash = await bcryptjs.hash(Contraseña, 10);
-    if(Email && Contraseña){
-        db.query('SELECT * FROM usuario WHERE Email = ? ', [Email], async (error, results)=>{
-          if(results.length == 0 || !(await bcryptjs.compare(Contraseña, results[0].Contraseña))){
-                res.send("Usuario o password incorrecto")
-        }else{
-         res.send("Ingreso exitoso")
-      }
-    })
-    }
-  })    
 
 
 

@@ -32,10 +32,10 @@ section.container
         form(action="homePageAdmin" method="POST")
           br
           .form-group
-              label
+              label(for='type')
                 h5 Tipo de documento
-              input.form-control.form(type='number' name="documentos ")
-                option(value='CC' select="CC") 
+              select.form-control.form( name="rol ")
+                option(value='CC' ) Cedula de Ciudadania
                 option(value='TI') Tarjeta de Identidad
                 option(value='CE') C&eacute;dula de Extranjer&iacute;a
                 option(value='NCS') N&uacute;mero ciego SENA
@@ -46,38 +46,36 @@ section.container
                 option(value='PEP') PEP
               br
               .form-group.mb-3
-              label(for='')
+              label(for='documento')
                 h5 N&uacute;mero de Documento
               input.form-control.form(type='number' name="document")
               br
-              label(for='TP id')
+              label(for='rol')
                 h5 Rol
               select.form-control.form(name="rol ")
                 option(value='1', select='Aprendiz') Aprendiz
-                option(value='2') Instructor 
-                option(value='3') Administrativo
-                option(value='4') Acudiente
+                option(value='2') Instructor                 
               br
           .form-group
           
-            label
+            label(for='name')
               h5 Primer Nombre
             input.form-control.form(type='text' name ='firstName' )
             br
               
-            label
+            label(for='secondName')
               h5 Segundo Nombre
             input.form-control.form(type='text' name ='secondName' )
             .form-group
               br
               .form-group
-            label
+            label(for='surname')
               h5 Primer Apellido
             input.form-control.form(type='text' name ='surname' )
             .form-group
               br
               .form-group
-            label
+            label(for='secondSurname')
               h5 Segundo Apellido
             input.form-control.form(type='text' name ='secondSurname' )
             .form-group
@@ -89,12 +87,12 @@ section.container
               input.form-control.form(type='email' name="email" placeholder='Ingrese correo electronico')
               //- // texto , danger
               br
-              label
+              label(for='phone')
               h5 Telefono
               input.form-control.form(type='tel' name ='phone' )
               .form-group
                 br
-              label(for='SD')
+              label(for='campus')
                 h5 Sede
               select#SD.form-control.form( name="campus")
                 option(value='CET') Centro de Electricidad Electr&oacute;nica y Telecomunicaciones (CEET) 
@@ -106,7 +104,7 @@ section.container
               br
             
             .form-group.mb-3
-              label(for='TT')
+              label(for='titulacion')
                 h5 Tipo de Titulaci&oacute;n
               select.form-control.form(name="title")
                 option(value='') T&eacute;cnico
@@ -116,12 +114,12 @@ section.container
               br
 
             .form-group
-              label(for='Ficha')
+              label(for='file')
                 h5 N&uacute;mero de ficha
               input.form-control.form(type='number' name="file")
               br
             .form-group.mb-3
-              label(for='Hr')
+              label(for='workday')
                 h5 Horario
               select.form-control.form(type="workday")
                 option(value='') Diurna

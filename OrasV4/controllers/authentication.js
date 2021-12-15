@@ -1,22 +1,41 @@
-// const {passport} = require ('../lib/passports');
-// const express = require('express');
-// const {router} = express.Router();
+const db = require("../config/db");
+
+const authenticationInstructor =  async(req, res) =>{
+    const email = req.body.email;
+    const password = req.body.password;
+    let passwordHaash = await bcryptjs.hash(password, 8);
+    if(email && password){
+        db.query('SELECT * FROM usuario WHERE Email = ?', [email], async (error,results)=>{
+            if(results.length == 0 || !(await bcryptjs.compare(password, results[0].password))){
+                res.render('ingresoInstructor',{
+                    alert:true,
+                    alertTitle: 'Error',
+                    alertMessage:'Email y/o constraseña incorrecta',
+                    alertIcon: 'error',
+                    showConfirmButton: true,
+                    timer: false,
+                    ruta:'ingresoInstructor'
+                });
+        }else{
+            req.session.name = results[0].email
+            res.render('ingresoInstructor',{
+                alert:true,
+                alertTitle: 'Conexión exitosa',
+                alertMessage:'LOGIN CORRECTO',
+                alertIcon: 'success',
+                showConfirmButton: false,
+                timer: 1500,
+                ruta:'/'
+            })
+        }
+        })
+    }else{
+        res.send('Por favor ingrese un correo y su contraseña')
+    }
+}
 
 
-// const authenticationInstructor =  async(req, res) =>{
-//     const email = req.body.email;
-//     const password = req.body.email;
-//     let passwordHasas = await bcryptjs.hash(pass, 10);
-//     if(user && pass){
-//         connection.query('SELECT * FROM usuario WHERE email = ? ', [email], async (error, results)=>{
-//             if(results.length == 0 || !(await bcryptjs.compare(password, results[0].password))){
-//                 res.send("Usuario o password incorrecto")
-//             }else{
-//                 res.send("Ingreso exitoso")
-//             }
-//         })
-//     }
-// }
+
 
 const authenticationAprendiz = (req, res) =>{
     console.log(req.body);
@@ -33,8 +52,7 @@ const authenticationAdmin = (req, res) =>{
 };
 
 module.exports = {
-    // authenticationInstructor,
+    authenticationInstructor,
     authenticationAprendiz,
-    authenticationAdmin
+    authenticationAdmin,
 }
-// module.exports = router; 

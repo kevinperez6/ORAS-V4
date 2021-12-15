@@ -41,7 +41,7 @@ const router = Router();
 router.get('/', inicio);
 
 router.get('/ingresoInstructor',ingresoInstructor); 
-
+router.post('/ingresoInstructor', authenticationInstructor)
 
   
 router.get('/ingresoAprendiz',ingresoAprendiz);
@@ -93,7 +93,7 @@ router.get('/consultaGeneral', consultaGeneral);
 router.get('/consultaIndividual', consultaIndividual);
 
 router.get('/registro', registro);
-// router.post('/registro', registrationUser);
+router.post('/registro', registrationUser);
 
 
 
