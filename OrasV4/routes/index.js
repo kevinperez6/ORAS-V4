@@ -31,7 +31,7 @@ const {inicio,
 
 const { authenticationInstructor,authenticationAprendiz,authenticationAdmin} = require('../controllers/authentication.js')
 const{
-  registrationUser
+  // registrationUser
 } = require ('../controllers/registration.js')
 
 
@@ -93,27 +93,9 @@ router.get('/consultaGeneral', consultaGeneral);
 router.get('/consultaIndividual', consultaIndividual);
 
 router.get('/registro', registro);
-router.post('/registro', registrationUser);
+// router.post('/registro', registrationUser);
 
 
-
-
-// router.get('/ingresoInstructor', (req, res) => {
-//   res.render('./ingresos/ingresoInstructor');
-//  });
-
-// router.get('/ingresoInstructor', (req, res) => {
-//   res.render('./ingresos/ingresoInstructor');
-// });
-
-// router.get('/ingresoInstructor', (req, res) => {
-//   res.render('./ingresos/ingresoInstructor');
-// });
-  
-  // router.get('/actividadesInstructor',)
-  
-  // router.get('/actividadesAprendiz',)
-  
   
   
   //Exportamos las rutas al archivo principal app
