@@ -1,25 +1,16 @@
-const db = require("../config/db");
+const passport = require('passport')
 
-const authenticationInstructor =  async(req, res) =>{
-    const email = req.body.email;
-    const password = req.body.password;
-    // let passwordHaash = await bcryptjs.hash(password, 8);
-    if(email && password){
-        db.query('SELECT * FROM usuario WHERE Email = ?', [email], async (error,results)=>{
-            if(results.length == 0 || !(await bcryptjs.compare(password, results[0].password))){
-                res.send('incorrecto')
-                    // alert:true,
-                    // alertTitle: 'Error',
-                    // alertMessage:'Email y/o constraseña incorrecta',
-                    // alertIcon: 'error',
-                    // showConfirmButton: true,
-                    // timer: false,
-                    // ruta:'/'
-                
-        }
-        })
-    }
-}
+// passport.serializeUser((usr, done))
+
+
+const authenticationInstructor = (req, res) =>{
+    passport.authenticate('local.homepageInstructor',{
+        succesRedirect: '/ingresoInstructor',
+        failureRedirect: '/ingresoInstructor',
+        failureFlas: true,
+    }); 
+    res.send('received')
+};
 
 
 
@@ -30,11 +21,11 @@ const authenticationAprendiz = (req, res) =>{
 }
 
 const authenticationAdmin = (req, res) =>{
-    // passport.authenticate('local,signup',{
-        // succesRedirect:'./homePageAdmin',
-        // failureRedirect: '/ingresoAdmin,',
-        // failureFlash: 'true'
-    // })
+    passport.authenticate('local,signup',{
+        succesRedirect:'./homePageAdmin',
+        failureRedirect: '/ingresoAdmin,',
+        failureFlash: 'true'
+    })
     res.send('received');
 };
 

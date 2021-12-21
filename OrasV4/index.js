@@ -1,17 +1,17 @@
 // const express = require('express')
 const  express = require('express'); //Se importa la libreria express
 const  router  = require('./routes/index.js');//Se importa la carpeta contenedora de las rutas, se tiene que agregar a app
-const PassportLocal = require('passport-local').Strategy
-const {database} = require('./config/db');
 const cors = require('cors');
-// CORS 
-// const cors = require('cors');
+const {body, validationResults} = require('express-validator');
+const {database} = require('./config/db');
+const MySQLStore = require('express-mysql-session');
+const passport = require('passport');
 
 
 //Initializations
 const app = express();
 import('./lib/passports.js');
-
+require('./controllers/authentication')
 // Invocamos a dotenv
 // const dotenv = require('dotenv');
 // dotenv.config({path:'./config/db.js'})
@@ -43,11 +43,13 @@ app.use(session({
     secret: 'Secreto',// Clave secreta
     resave: true,//
     saveUnitilized:true,//Si se inicializa una peticion sin guardar nada aun asi se va a guardar
+    // store: new MySQLStore(database)
 }));
 
 
 //8 - invocamos a la base de datos
 const  db = require('./config/db.js'); 
+const { initialize } = require('passport');
 
 //Definir puerto
 const port = process.env.PORT || 4000// Si existe un puerto desocupado utilizalo, de no ser asi, utiliza el puerto 4000
@@ -74,6 +76,10 @@ app.listen(port, () => {
 app.use(cors());
 
 
+
+//13 - inicializar passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.post('/registro',async(req, res) =>{
     const tipoDocumento = req.body.typ;

@@ -32,16 +32,16 @@ br
             | que se considere la ficha de la formación
           hr
           br
-          form#enviar-email(action='/ingresoInstructor' method="POST")
+          form#enviar-email(action='/signup' method="POST")
             .form-group
               label(for='email')
                 h5 Correo electr&oacute;nico
-              input#email.form-control.form-one(type='email' placeholder='Correo misena' name='email')
+              input#email.form-control.form-one(type='email' placeholder='Correo misena' name='Email')
             br
             .form-group
               label(for='password')
                 h5 Contrase&ntilde;a
-              input#password.form-control.form-one(type='password' placeholder='Contraseña' name='password')            
+              input#password.form-control.form-one(type='password' placeholder='Contraseña' name='Contraseña')            
             div
               button#enviar.boton-one-form(type='submit' role='button') Ingresar
           br
@@ -51,17 +51,17 @@ br
           div
             a.btn.btn-outline-primary.mb-3(href='/') Cambiar rol
           
-  script(src="//cdn.jsdelivr.net/npm/sweetalert2@10")
-  script.
-     Swal.fire({
-       title:'alertTitle',
-       text:'alertMessage',
-       icon:'alertIcon',
-       showConfirmButton:showConfirmButton ,
-       timer: timer
-     }).then(()=>{
-       window.location='ruta'
-     })
+  //- script(src="//cdn.jsdelivr.net/npm/sweetalert2@10")
+  //- script.
+  //-    Swal.fire({
+  //-      title:'alertTitle',
+  //-      text:'alertMessage',
+  //-      icon:'alertIcon',
+  //-      showConfirmButton:showConfirmButton ,
+  //-      timer: timer
+  //-    }).then(()=>{
+  //-      window.location='ruta'
+  //-    })
 br
 br
 //- script(src='/static/js/app.js')
